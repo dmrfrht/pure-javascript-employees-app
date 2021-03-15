@@ -1,0 +1,7 @@
+{
+  "employees": [
+    { "id": 1, "name": "Hatice", "surname": "Ellialtioglu", "salary": 5000, "department": "QA Engineer" },
+    { "id": 2, "name": "Sedanur", "surname": "Demir", "salary": 5000, "department": "Computer Secience" },
+    { "id": 3, "name": "Zeynep Asya", "surname": "Demir", "salary": 10000, "department": "Just a kid" }
+  ]
+}
