@@ -1,4 +1,5 @@
 import { Request } from './request'
+import { UI } from './ui'
 
 const form = document.querySelector("#employee-form")
 const inputName = document.querySelector("#name")
@@ -8,10 +9,22 @@ const employeeList = document.querySelector("#employees")
 const updateEmployeeBtn = document.querySelector("#update")
 
 const req = new Request("http://localhost:3000/employees")
+const ui = new UI()
 
-// req.get()
-//   .then(res => console.log(res))
-//   .catch(err => console.error(err))
+eventListener()
+function eventListener() {
+  document.addEventListener("DOMContentLoaded", getAllEmployee)
+}
+
+function getAllEmployee() {
+  req.get()
+  .then(res => {
+    ui.addAllEmployee(res)
+  })
+  .catch(err => console.error(err))
+}
+
+
 
 // req.post({
 //   name: "Canan Birinci",
